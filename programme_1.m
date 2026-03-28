@@ -9,30 +9,15 @@ f_x6 = @(x) (x - 1).^2 - 2 ;%sur [−3; 4.5]
 f_x7 = @(x) (x - 1).^4-2*x2+x-1; %sur [−3; 4.5]
 
 
-% figure
-% calc_affichage(f_x,3,4, sqrt(10));
-% figure
-% calc_affichage(f_x2,4,5, 0);
-% figure
-% calc_affichage(f_x3,0,2, 0);
 
-estimation = algo_dichotomie(f_x,3,5)
-estimation2 = algo_dichotomie(f_x2,0,5)
-estimation3 = algo_dichotomie(f_x3,0,5)
+%Exercice 3
+calc_affichage(f_x,3,4, sqrt(10), 1);
+calc_affichage(f_x2,0,5, sqrt(2), 1);
+calc_affichage(f_x3,0,2, 0, 2);
 
+%Exercice 4
+calc_affichage(f_x4,1,2.5,0, 2);
+calc_affichage(f_x5,0,4.5, 0, 2);
+calc_affichage(f_x6,)
 
-t=0:0.001:4.5;
-% figure
-% plot(t,f_x(t),'LineWidth',2);
-% figure
-% plot(t,f_x2(t),'LineWidth',2);
-% figure
-% plot(t,f_x3(t),'LineWidth',2);
-figure
-plot(t,f_x4(t),'LineWidth',2);
-figure
-plot(t,f_x5(t),'LineWidth',2);
-
-valeur1 = algo_trichotomie(f_x4,1,2.5);
-valeur2 = algo_trichotomie(f_x5,0,4.5);
 
