@@ -10,6 +10,7 @@ if (option_algo==2)
     estimation = algo_trichotomie(f,a,b);
 end
 
+disp(['Pour la fonction ' func2str(f) ' : (sur ' num2str(a) ',' num2str(b) ')']);
 disp("L'estimation est de :");
 disp(estimation);
 disp("L'erreur est de :");
