@@ -9,7 +9,6 @@ f_x6 = @(x) (x - 1).^2 - 2 ;%sur [−3; 4.5]
 f_x7 = @(x) (x - 1).^4-2*(x.^2)+x-1; %sur [−3; 4.5]
 
 
-
 %Exercice 2
 calc_affichage(f_x,3,4, sqrt(10), 1);
 
