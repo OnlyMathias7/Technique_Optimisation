@@ -1,0 +1,34 @@
+clc, clear, close all
+
+
+opt1 = "Alpha est égal à 0.01";
+opt2 = "Alpha est égal à 0.02";
+opt3 = "Alpha est égal à 0.01";
+choice = menu(message,opt1,...,optn)
+
+
+p=10;
+J_u = @(u) (u(1) - 1).^2 + p*(u(1).^2 -u(2)).^2;
+GJ_u = @(u) [2*(u(1)-1)+2*p*(2*u(1))*(u(1).^2-u(2)); -2*p*(u(1).^2-u(2))];
+HJ_u = @(u) [2+4*p*(3*(u(1).^2)-u(2)) -4*p*u(1); -4*p*u(1) 2*p];
+
+% α = 0.01, 0.02 puis 0.04.
+alpha = 0.01;
+tol = 10.^(-3);
+max_iter=2500;
+u_0 = [-1;1];
+
+[u_est, k, hist_u] = algo_gradiant_pas_pas(u_0,GJ_u, alpha, max_iter, tol);
+
+
+%Affichage
+
+figure(1)
+hold on
+plot(u_est(1), u_est(2), '*', 'MarkerSize', 10 );
+plot(u_0(1), u_0(2), '*', 'MarkerSize', 10 );
+plot(hist_u(1,:), hist_u(2,:), 'r');
+
+
+
+

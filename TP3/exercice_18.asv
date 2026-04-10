@@ -1,0 +1,10 @@
+clc, clear, close all
+
+J_u = @(u) u(1).^2+u(2).^4;
+J_u2 = @(u) (u(1)-0.5).^2+u(2).^4;
+
+
+%Tracer les lignes de niveau pour U = [−2; 2] × [−2; 2].
+bx=[-2,2];
+by=[-2,2];
+n=50;p=10;d=0.1;

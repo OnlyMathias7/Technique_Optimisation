@@ -1,0 +1,13 @@
+function u = algo_gradiant_RosenBrock(u,GJ, alpha, max_iter)
+    flag = 'true';
+    k=0;
+    while (flag)
+        
+        k=k+1;
+        u=u-alpha*(GJ(u));
+        if ( k >= max_iter )
+            flag='false';
+        end
+
+    end
+end
