@@ -12,14 +12,14 @@ end
 if (choice == 2) 
     opt = opt2;
 end
-opt11 = "u_0 = [2,1]";
+opt11 = "u_0 = [2,-1]";
 opt21 = "u_0 = [1;0.25]";
 opt31 = "u_0 = [-1;0.5]";
 opt41 = "u_0 = [1.25;-0.8]";
 opt51 = "u_0 = [2;1]";
 choice1 = menu(message,opt11, opt21, opt31, opt41, opt51);
 if (choice1 == 1) 
-    u_0 = [2;1];
+    u_0 = [2;-1];
 end
 if (choice1 == 2) 
     u_0 = [1;0.25];
