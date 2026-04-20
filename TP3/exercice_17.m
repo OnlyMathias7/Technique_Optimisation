@@ -1,5 +1,11 @@
 clc, clear, close all
-'/home/etudiants/msaldanha700/Documents/Optimisation/TP2'
+
+
+% Chemin dynamique
+cheminTP3 = fileparts(mfilename('fullpath'));          % dossier courant (TP3)
+cheminVoisin = fullfile(fileparts(cheminTP3), 'TP2');  % dossier voisin (TP2)
+
+addpath(cheminVoisin);
 
 alpha = 0.01;
 message = "Choix possible";
