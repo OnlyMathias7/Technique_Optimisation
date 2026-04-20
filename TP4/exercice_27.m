@@ -1,6 +1,10 @@
 clc, clear, close all
 
-'/home/etudiants/msaldanha700/Documents/Optimisation/TP3'
+% Chemin dynamique
+cheminTP3 = fileparts(mfilename('fullpath'));          % dossier courant (TP4)
+cheminVoisin = fullfile(fileparts(cheminTP3), 'TP3');  % dossier voisin (TP3)
+
+addpath(cheminVoisin);
 
 message = "Choix fonction";
 opt1 = "Newton-Raphson";
